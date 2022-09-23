@@ -1,0 +1,43 @@
+@font-face {
+  font-family: Muli-ExtraBold;
+  src: url(../fonts/Muli-ExtraBold.ttf);
+}
+@font-face {
+  font-family: Muli-SemiBold;
+  src: url(../fonts/Muli-SemiBold.ttf);
+}
+@font-face {
+  font-family: Muli-Regular;
+  src: url(../fonts/Muli-Regular.ttf);
+}
+.product-explore-link {
+  cursor: pointer;
+  width: fit-content;
+  background-color: #006B68;
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem 2.5rem;
+  border-radius: 4px;
+  font-family: Muli-Regular;
+  font-size: 14px;
+  line-height: 18px;
+  border: 1px solid #006B68;
+  margin-right: 0.9rem;
+}
+@media screen and (min-width: 544px) {
+  .product-explore-link {
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+.product-explore-link:hover {
+  background-color: white;
+  color: #006B68;
+  transition: background-color 0.15s linear;
+}
+
+.view-portal-product {
+  margin-top: 3rem;
+}
+
+/*# sourceMappingURL=homepage.css.map */

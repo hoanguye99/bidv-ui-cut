@@ -1,0 +1,102 @@
+// Typography
+//
+// Typography variables.
+
+$blue-primary: #006B68;
+$red-primary: #ED1D24;
+$grey-primary: #B9C1C6;
+
+@font-face {
+  font-family: Muli-ExtraBold;
+  src: url(../fonts/Muli-ExtraBold.ttf);
+}
+@font-face {
+  font-family: Muli-SemiBold;
+  src: url(../fonts/Muli-SemiBold.ttf);
+}
+@font-face {
+  font-family: Muli-Regular;
+  src: url(../fonts/Muli-Regular.ttf);
+}
+
+// Heading mixins.
+@mixin heading-1-style {
+  font-family: Muli-ExtraBold;
+  font-size: 21px;
+  line-height: 30px;
+  
+  @include breakpoint($bp-xsm) {
+    font-size: 41px;
+    line-height: 50px;
+  }
+}
+
+@mixin sub-heading-style {
+  font-family: Muli-ExtraBold;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+@mixin table-header-style {
+  font-family: Muli-ExtraBold;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+// Heading mixins.
+@mixin card-heading-style {
+  font-family: Muli-ExtraBold;
+  color: $blue-primary;
+  font-size: 18px;
+  line-height: 23px;
+  @include breakpoint($bp-md) {
+    font-size: 25px;
+    line-height: 32px;
+  }
+}
+
+@mixin navigation-style {
+  font-family: Muli-Regular;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+@mixin content-style {
+  font-family: Muli-Regular;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin btn-font-style {
+  font-family: Muli-Regular;
+  font-size: 14px;
+  line-height: 18px;
+  @include breakpoint($bp-xsm) {
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+
+
+
+// Typography DEFAULT
+//
+// Typography variables.
+
+$font-sans: 'Lato', 'Arial', sans-serif;
+$font-serif: 'Georgia', serif;
+
+@mixin font-stack-primary {
+  font-family: $font-sans;
+}
+
+@mixin font-stack-secondary {
+  font-family: $font-serif;
+}
+
+// Font-Weights.
+$font-weight-light: 200;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-italic: italic;

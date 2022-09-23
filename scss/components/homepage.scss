@@ -1,0 +1,10 @@
+@import '../utils/init';
+
+.product-explore-link{
+  @include btn-hover-white;
+  margin-right: 0.9rem;
+}
+
+.view-portal-product {
+  margin-top: 3rem;
+}
