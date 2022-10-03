@@ -7,7 +7,7 @@ $bp-md: 1024px;
 $bp-lg: 1200px;
 $bp-xl: 1540px;
 
-$breakpoints-down: ("bp-sm": "779px");
+$breakpoints-down: ("bp-sm": "779px", "bp-md": "1023px");
 
 // Expects $viewport to either be a number: 200px
 // Or a string: 'max-width: 300px'

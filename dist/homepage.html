@@ -1,3 +1,7 @@
+<!-- Remove js script
+Remove link css 
+Custom Fields: Products, News, Buttons, Homepage video
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,24 +13,380 @@
     <link rel="stylesheet" href="./css/homepage.css" />
   </head>
   <body>
+    <div class="homepage-container">
+      <!-- <div class="hero-color"></div> -->
+      <video autoplay muted loop id="hero-video" class="hide-for-mobile">
+        <source src="video/APIs_banner web.mp4" type="video/mp4">
+      </video>
+      <video autoplay muted loop id="hero-video-rps" class="hide-for-desktop">
+        <source src="video/APIs_Banner_RPS.mp4" type="video/mp4">
+      </video>
+      <div class="hero container">
+        <p class="hero__header">
+          Khám phá tiềm năng doanh nghiệp của bạn cùng các API của BIDV
+        </p>
+        <p class="hero__subheader">
+          Chào mừng bạn đến với BIDV Smart Connect Portal, nơi bạn có thể kết
+          nối với hệ sinh thái dịch vụ tài chính toàn diện một cách an toàn và
+          tin cậy
+        </p>
+        <button class="hero__button">
+          <p>TÌM HIỂU NGAY</p>
+          <svg
+            width="18"
+            height="9"
+            viewBox="0 0 18 9"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.92719 5.41092L14.63 5.45664L13.373 6.85103C12.9929 7.27269 12.9911 7.95629 13.3689 8.38048C13.7458 8.80466 14.3593 8.80671 14.7394 8.38505L17.6557 5.14981C18.0349 4.72815 18.0367 4.04455 17.6598 3.62036L14.7609 0.365722C14.5715 0.154166 14.3246 0.047341 14.0765 0.046513C13.8284 0.0456851 13.58 0.150858 13.3904 0.361149C13.0103 0.782808 13.0085 1.46641 13.3863 1.8906L14.6358 3.29335L0.932986 3.24762C0.428024 3.24594 0.0129307 3.70642 0.0114209 4.26996L0.0111195 4.38245C0.00960973 4.94599 0.422228 5.40923 0.92719 5.41092Z"
+              fill="#987A0B"
+            />
+          </svg>
+        </button>
+      </div>
 
-    <div id="view-portal-product" class="container view-portal-product">
-      <a href="{{ new_path | join('/') }}" id="product-explore-link" class="product-explore-link">Chi tiet</a>
-      <a href="{{ new_path | join('/') }}" id="product-explore-link" class="product-explore-link">Chi tiet</a>
-      <a href="{{ new_path | join('/') }}" id="product-explore-link" class="product-explore-link">Chi tiet</a>
-      <a href="{{ new_path | join('/') }}" id="product-explore-link" class="product-explore-link">Chi tiet</a>
-      <a href="{{ new_path | join('/') }}" id="product-explore-link" class="product-explore-link">Chi tiet</a>
-      <a href="{{ new_path | join('/') }}" id="product-explore-link" class="product-explore-link">Chi tiet</a>
-      <a href="{{ new_path | join('/') }}" id="product-explore-link" class="product-explore-link">Chi tiet</a>
-      <a href="{{ new_path | join('/') }}" id="product-explore-link" class="product-explore-link">Chi tiet</a>
-      <a href="{{ new_path | join('/') }}" id="product-explore-link" class="product-explore-link">Chi tiet</a>
-      <a href="{{ new_path | join('/') }}" id="product-explore-link" class="product-explore-link">Chi tiet</a>
-      <a href="{{ new_path | join('/') }}" id="product-explore-link" class="product-explore-link">Chi tiet</a>
-      <a href="{{ new_path | join('/') }}" id="product-explore-link" class="product-explore-link">Chi tiet</a>
+      <div class="homepage-product container">
+        <div class="homepage-product__header">
+          <p>APIs</p>
+          <p>Các nhóm<br />thông dụng</p>
+        </div>
+        <div class="homepage-product__body">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="homepage-product-link-wrapper container">
+        <button class="homepage-product-link">XEM TẤT CẢ</button>
+      </div>
+
+      <div class="homepage-whyus container">
+        <p class="homepage-whyus__header">Tại sao lại lựa chọn chúng tôi?</p>
+        <div class="homepage-whyus__body">
+          <div>
+            <div class="header">
+              <div class="image"></div>
+              <p class="title">Hệ sinh thái rộng lớn</p>
+            </div>
+            <p class="body">
+              Với hơn 1000 đối tác, trung gian thanh toán, doanh nghiệp trong hệ
+              sinh thái BIDV, chúng tôi có thể giúp bạn phát triển và mở rộng
+              quy mô kinh doanh
+            </p>
+          </div>
+          <div>
+            <div class="header">
+              <div class="image"></div>
+              <p class="title">Thấu cảm với khách hàng</p>
+            </div>
+            <p class="body">
+              Chúng tôi có các chuyên gia và chuyên gia hiểu được sự phức tạp
+              trong công việc kinh doanh của bạn.
+            </p>
+          </div>
+          <div>
+            <div class="header">
+              <div class="image"></div>
+              <p class="title">Đổi mới tài chính</p>
+            </div>
+            <p class="body">
+              Tiềm năng đổi mới tài chính gần như là vô hạn và chúng tôi đang
+              giúp khách hàng điều hướng hệ sinh thái kỹ thuật số để giúp tạo ra
+              giá trị lâu dài.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="homepage-connect">
+        <div class="container">
+          <p>Kết nối với hệ thống API của BIDV</p>
+          <button>KẾT NỐI</button>
+        </div>
+      </div>
+
+      <div class="homepage-steps container">
+        <p class="homepage-steps__header">Hành trình trải nghiệm sản phẩm</p>
+        <div class="homepage-steps__body">
+          <div class="step">
+            <div class="step__main-content">
+              <div class="include-connect">
+                <div class="image-container">
+                  <div class="blur"></div>
+                  <span class="image"></span>
+                </div>
+                <div class="connect vertical hide-for-desktop">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="text-container">
+                <p class="title">1. Đăng ký tài khoản</p>
+                <div class="content-wrapper open">
+                  <p class="content">
+                    Đăng ký tài khoản để khám phá, trải nghiệm các sản phẩm dịch
+                    vụ của BIDV cung cấp qua Open API. <br />Mail kích hoạt có
+                    thời hạn trong vòng 48h. Click vào link trong mail để kích
+                    hoạt tài khoản.
+                  </p>
+                  <svg
+                    id="homepage-steps-content-dropdown"
+                    width="12"
+                    height="8"
+                    viewBox="0 0 12 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="hide-for-desktop"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.166699 1.24997C0.166699 0.951299 0.281033 0.652632 0.508533 0.425132C0.9647 -0.0310343 1.70203 -0.0310343 2.1582 0.425132L6.01403 4.28097L9.85587 0.570966C10.3202 0.124133 11.0587 0.136966 11.5055 0.600133C11.9524 1.06447 11.9395 1.80297 11.4775 2.2498L6.81087 6.75547C6.35237 7.19763 5.62553 7.1918 5.1752 6.74147L0.508533 2.0748C0.281033 1.8473 0.166699 1.54863 0.166699 1.24997Z"
+                      fill="#C0C0C0"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="connect horizontal-ltr hide-for-mobile">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__main-content">
+              <div class="include-connect">
+                <div class="image-container">
+                  <div class="blur"></div>
+                  <span class="image"></span>
+                </div>
+                <div class="connect vertical hide-for-desktop">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="text-container">
+                <p class="title">2. Tạo ứng dụng & chọn sản phẩm</p>
+                <div class="content-wrapper open">
+                  <p class="content">
+                    Vào menu Ứng dụng, chọn Tạo một ứng dụng mới để đăng ký và
+                    dùng thử các API của dịch vụ mà bạn muốn trải nghiệm.
+                    <br />Chọn sản phẩm dịch vụ muốn trải nghiệm. Đăng ký gói
+                    API trong sản phẩm dịch vụ cho ứng dụng.
+                  </p>
+                  <svg
+                    id="homepage-steps-content-dropdown"
+                    width="12"
+                    height="8"
+                    viewBox="0 0 12 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="hide-for-desktop"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.166699 1.24997C0.166699 0.951299 0.281033 0.652632 0.508533 0.425132C0.9647 -0.0310343 1.70203 -0.0310343 2.1582 0.425132L6.01403 4.28097L9.85587 0.570966C10.3202 0.124133 11.0587 0.136966 11.5055 0.600133C11.9524 1.06447 11.9395 1.80297 11.4775 2.2498L6.81087 6.75547C6.35237 7.19763 5.62553 7.1918 5.1752 6.74147L0.508533 2.0748C0.281033 1.8473 0.166699 1.54863 0.166699 1.24997Z"
+                      fill="#C0C0C0"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="connect horizontal-ltr hide-for-mobile">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__main-content">
+              <div class="include-connect">
+                <div class="image-container">
+                  <div class="blur"></div>
+                  <span class="image"></span>
+                </div>
+                <div class="connect vertical hide-for-desktop">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="text-container">
+                <p class="title">3. Trải nghiệm API</p>
+                <div class="content-wrapper open">
+                  <p class="content">
+                    Các API trong nhóm sản phẩm dịch vụ đã đăng ký cho ứng dụng.
+                    <br />Dừng thử API trực tiếp trên trang Developer Portal qua
+                    tính năng Try it, hoặc tải tài liệu đặc tả API về để dùng
+                    thử bằng các công cụ như Postman, SOAPI UI. <br />Dữ liệu
+                    trả về là của môi trường Sandbox.
+                  </p>
+                  <svg
+                    id="homepage-steps-content-dropdown"
+                    width="12"
+                    height="8"
+                    viewBox="0 0 12 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="hide-for-desktop"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.166699 1.24997C0.166699 0.951299 0.281033 0.652632 0.508533 0.425132C0.9647 -0.0310343 1.70203 -0.0310343 2.1582 0.425132L6.01403 4.28097L9.85587 0.570966C10.3202 0.124133 11.0587 0.136966 11.5055 0.600133C11.9524 1.06447 11.9395 1.80297 11.4775 2.2498L6.81087 6.75547C6.35237 7.19763 5.62553 7.1918 5.1752 6.74147L0.508533 2.0748C0.281033 1.8473 0.166699 1.54863 0.166699 1.24997Z"
+                      fill="#C0C0C0"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="connect vertical hide-for-mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__main-content">
+              <div class="include-connect">
+                <div class="image-container">
+                  <div class="blur"></div>
+                  <span class="image"></span>
+                </div>
+                <div class="connect vertical hide-for-desktop">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="text-container">
+                <p class="title">4. Tích hợp và kiểm thử</p>
+                <div class="content-wrapper open">
+                  <p class="content">
+                    Yêu cầu tích hợp và kiểm thử. <br />Nhận thông tin kết nối
+                    môi trường kiểm thử, tiến hành tích hợp và kiểm thử.
+                  </p>
+                  <svg
+                    id="homepage-steps-content-dropdown"
+                    width="12"
+                    height="8"
+                    viewBox="0 0 12 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="hide-for-desktop"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.166699 1.24997C0.166699 0.951299 0.281033 0.652632 0.508533 0.425132C0.9647 -0.0310343 1.70203 -0.0310343 2.1582 0.425132L6.01403 4.28097L9.85587 0.570966C10.3202 0.124133 11.0587 0.136966 11.5055 0.600133C11.9524 1.06447 11.9395 1.80297 11.4775 2.2498L6.81087 6.75547C6.35237 7.19763 5.62553 7.1918 5.1752 6.74147L0.508533 2.0748C0.281033 1.8473 0.166699 1.54863 0.166699 1.24997Z"
+                      fill="#C0C0C0"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__main-content">
+              <div class="include-connect">
+                <div class="image-container">
+                  <div class="blur"></div>
+                  <span class="image"></span>
+                </div>
+                <div class="connect vertical hide-for-desktop">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="text-container">
+                <p class="title">5. Chuẩn bị điều kiện triển khai</p>
+                <div class="content-wrapper open">
+                  <p class="content">
+                    Xác nhận hoàn tất kiểm thử và yêu cầu go live. <br />Nhận
+                    thông tin kết nối môi trường Production.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="connect horizontal-rtl hide-for-mobile">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__main-content">
+              <div class="include-connect">
+                <div class="image-container">
+                  <div class="blur"></div>
+                  <span class="image"></span>
+                </div>
+              </div>
+              <div class="text-container">
+                <p class="title">6. Go live sản phẩm</p>
+                <div class="content-wrapper open">
+                  <p class="content">Triển khai lên môi trường Production.</p>
+                </div>
+              </div>
+            </div>
+            <div class="connect horizontal-rtl hide-for-mobile">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="homepage-steps__button-wrapper">
+          <button>CHI TIẾT</button>
+        </div>
+      </div>
+
+      <div class="homepage-news container">
+        <p class="homepage-news__header">Tin tức</p>
+        <div class="homepage-news__body">
+          <div class="content">
+            <p class="hide-for-mobile">
+              Xem thêm những tin tức, sự kiện, thành tựu mới nhất từ chúng tôi
+            </p>
+            <button>XEM TẤT CẢ</button>
+          </div>
+          <div class="homepage-news__card"></div>
+          <div class="homepage-news__card"></div>
+        </div>
+      </div>
     </div>
-     
 
-
-
+    <script src="./js/homepage.js"></script>
   </body>
 </html>

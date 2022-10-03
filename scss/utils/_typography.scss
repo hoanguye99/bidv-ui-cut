@@ -2,26 +2,72 @@
 //
 // Typography variables.
 
-$blue-primary: #006B68;
-$red-primary: #ED1D24;
+//primary
+$blue-primary: #13AE8E;
+$blue-primary-1: #005452;
+$blue-primary-2: #006B68;
+$blue-primary-3: #13AE8E;
+
+// accent
+$accent-1: #987A0B;
+$accent-2: #fdb71a;
+
+// semantic
+$red-primary: #F73333;
+$semantic-1: #00C4B3;
+$semantic-2: #0BE3BC;
+$semantic-3: #BDE3DC;
+$semantic-4: #E8FCF8;
+$semantic-5: #00D1DE;
+$semantic-6: #76BC21;
+$semantic-7: #F73333;
+$semantic-8: #148295;
+$semantic-9: #F5FFFD;
+$semantic-10: #F4FDFF;
+
+// neutral
 $grey-primary: #B9C1C6;
+$neutral-1: #B9C1C6;
+$neutral-2: #575757;
+$neutral-3: #8e8e8e;
+$neutral-4: #c0c0c0;
+$neutral-5: #d9d9d9;
+$neutral-6: #f5f5f5;
+$neutral-7: #ffffff;
+
+// linear
+$linear-1: linear-gradient(91.4deg, #005452 1.19%, #006B68 50.51%, #13AE8E 98.81%);
+$linear-2: linear-gradient(180deg, #13AE8E 0%, #005452 100%);
+$linear-3: linear-gradient(180deg, #1AC6BB 0%, #38919D 100%);
+$linear-4: linear-gradient(360deg, #0E78B4 0%, #20C1DC 100%);
+$linear-5: linear-gradient(92.74deg, #FCD878 0%, #FFC62F 100%);
 
 @font-face {
-  font-family: Muli-ExtraBold;
-  src: url(../fonts/Muli-ExtraBold.ttf);
+  font-family: Roboto-Regular;
+  src: url(../fonts/Roboto-Regular.ttf);
 }
 @font-face {
-  font-family: Muli-SemiBold;
-  src: url(../fonts/Muli-SemiBold.ttf);
+  font-family: Roboto-Medium;
+  src: url(../fonts/Roboto-Regular.ttf);
 }
 @font-face {
-  font-family: Muli-Regular;
-  src: url(../fonts/Muli-Regular.ttf);
+  font-family: Roboto-Bold;
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@mixin font-weight-regular {
+  font-family: Roboto-Regular;
+}
+@mixin font-weight-medium {
+  font-family: Roboto-Medium;
+}
+@mixin font-weight-bold {
+  font-family: Roboto-Bold;
 }
 
 // Heading mixins.
 @mixin heading-1-style {
-  font-family: Muli-ExtraBold;
+  @include font-weight-bold;
   font-size: 21px;
   line-height: 30px;
   
@@ -32,20 +78,20 @@ $grey-primary: #B9C1C6;
 }
 
 @mixin sub-heading-style {
-  font-family: Muli-ExtraBold;
+  @include font-weight-bold;
   font-size: 21px;
   line-height: 21px;
 }
 
 @mixin table-header-style {
-  font-family: Muli-ExtraBold;
+  @include font-weight-bold;
   font-size: 16px;
   line-height: 16px;
 }
 
 // Heading mixins.
 @mixin card-heading-style {
-  font-family: Muli-ExtraBold;
+  @include font-weight-bold;
   color: $blue-primary;
   font-size: 18px;
   line-height: 23px;
@@ -56,28 +102,17 @@ $grey-primary: #B9C1C6;
 }
 
 @mixin navigation-style {
-  font-family: Muli-Regular;
+  @include font-weight-regular;
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
 }
 
 @mixin content-style {
-  font-family: Muli-Regular;
+  @include font-weight-regular;
   font-size: 14px;
   line-height: 20px;
 }
-
-@mixin btn-font-style {
-  font-family: Muli-Regular;
-  font-size: 14px;
-  line-height: 18px;
-  @include breakpoint($bp-xsm) {
-    font-size: 17px;
-    line-height: 21px;
-  }
-}
-
 
 
 // Typography DEFAULT

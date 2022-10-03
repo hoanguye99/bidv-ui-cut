@@ -1,5 +1,46 @@
 // Mixins.
 
+// Buttons on landing Page
+@mixin btn-215 {
+  cursor: pointer;
+  width: fit-content;
+  color: white;
+  text-decoration: none;
+  width: 215px;
+  height: 48px;
+  border-radius: 4px;
+
+  // Fonts
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  // @include breakpoint($bp-xsm) {
+  //   // typography
+  //   font-size: 16px;
+  //   line-height: 20px;
+  // }
+}
+
+@mixin btn-296 {
+  cursor: pointer;
+  width: fit-content;
+  color: white;
+  text-decoration: none;
+  width: 296px;
+  height: 48px;
+  border-radius: 4px;
+
+  // Fonts
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  // @include breakpoint($bp-xsm) {
+  //   // typography
+  //   font-size: 16px;
+  //   line-height: 20px;
+  // }
+}
+
 //button
 @mixin btn-styles {
   cursor: pointer;
@@ -11,10 +52,21 @@
   border-radius: 4px;
 }
 
+@mixin btn-font-style {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  @include breakpoint($bp-xsm) {
+    // typography
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+
 @mixin btn-default {
   @include btn-styles;
   @include btn-font-style;
-  border: 1px solid $blue-primary;
 }
 
 @mixin btn-hover-white {
@@ -37,8 +89,8 @@
 @mixin btn-grey {
   @include btn-styles;
   @include btn-font-style;
-  background-color: $grey-primary;
-  border: 1px solid $grey-primary;
+  background-color: $neutral-6;
+  color: $neutral-3;
 }
 
 
@@ -49,7 +101,7 @@
   color: #a2a2a2;
   text-decoration: none;
 
-  font-family: Muli-Regular;
+  @include font-weight-regular;
   font-size: 16px;
   line-height: 20px;
   font-weight: 900;
