@@ -6,13 +6,38 @@
   // height: 1024px;
   // background-image: linear-gradient(180deg, #13AE8E 0%, #005452 100%);
 
-  #hero-video, #hero-video-rps {
+  .desktop-banner {
+    display: none;
+    @include breakpoint($bp-lg) {
+      display: block;
+    }
+  }
+  .ipad-banner {
+    display: none;
+    @include breakpoint($bp-xsm) {
+      display: block;
+    }
+    @include breakpoint($bp-lg) {
+      display: none;
+    }
+  }
+  .mobile-banner {
+    display: block;
+    @include breakpoint($bp-xsm) {
+      display: none;
+    }
+  }
+  #hero-video,
+  #hero-video-rps {
     position: absolute;
     z-index: -1;
     top: 0;
     left: 0;
     right: 0;
-    min-width: 100%;
+    object-fit: contain;
+    width: 100vw;
+    // height: 100vh;
+    // height: 100%;
     // height: 52rem;
     // @include breakpoint-down('bp-sm') {
     //   height: 70rem;
@@ -21,10 +46,23 @@
   }
 
   .hero {
-    @include breakpoint-down('bp-sm') {
-      padding-top: 431px;
+    padding-top: 390px;
+    @include breakpoint($bp-xsm) {
+      padding-top: 400px;
     }
-    padding-top: 250px;
+    @include breakpoint($bp-sm) {
+      padding-top: 550px;
+    }
+    @include breakpoint($bp-md) {
+      padding-top: 900px;
+    }
+    @include breakpoint($bp-lg) {
+      padding-top: 240px;
+    }
+    @include breakpoint($bp-xl) {
+      padding-top: 400px;
+    }
+
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -261,17 +299,11 @@
   }
 
   .homepage-connect {
-    @include breakpoint-down('bp-sm') {
-      margin-top: 0px;
-    }
-    margin-top: 150px;
     width: 100%;
-    height: 236px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../images/homepage-connect.png);
-    border-radius: 0px;
     position: relative;
     > div {
       position: absolute;
@@ -279,35 +311,52 @@
       left: 0;
       right: 0;
       bottom: 0;
-      > p {
+    }
+
+    &.hide-for-mobile {
+      height: 236px;
+      margin-top: 150px;
+      border-radius: 8px;
+      p {
+        margin-left: 48px;
         margin-top: 70px;
         @include font-weight-medium;
         font-size: 30px;
         line-height: 45px;
-        @include breakpoint-down('bp-sm') {
-          @include font-weight-bold;
-          margin-top: 20px;
-          font-size: 24px;
-          line-height: 150%;
-          max-width: 183px;
-        }
         color: white;
       }
-      > button {
+      button {
+        margin-left: 48px;
         margin-top: 20px;
         @include btn-215;
         background: white;
         color: $blue-primary-3;
-        @include breakpoint-down('bp-sm') {
-          width: 140px;
-          height: 40px;
-          font-size: 14px;
-          line-height: 20px;
-        }
         @include font-weight-medium;
         font-size: 18px;
         line-height: 28px;
         text-align: center;
+      }
+    }
+
+    &.hide-for-desktop {
+      background-position: 75% center;
+      height: 215px;
+      margin-top: 0px;
+      p {
+        @include font-weight-bold;
+        margin-top: 31px;
+        font-size: 18px;
+        line-height: 28px;
+        max-width: 123px;
+        color: white;
+      }
+      button {
+        margin-top: 32px;
+        @include btn-215;
+        width: 140px;
+        height: 40px;
+        font-size: 14px;
+        line-height: 20px;
       }
     }
   }
@@ -632,7 +681,7 @@
         font-size: 18px;
         line-height: 28px;
         text-align: center;
-        
+
         @include breakpoint-down('bp-sm') {
           width: 100%;
         }

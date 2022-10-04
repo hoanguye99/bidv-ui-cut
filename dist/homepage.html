@@ -15,11 +15,14 @@ Custom Fields: Products, News, Buttons, Homepage video
   <body>
     <div class="homepage-container">
       <!-- <div class="hero-color"></div> -->
-      <video autoplay muted loop id="hero-video" class="hide-for-mobile">
-        <source src="video/APIs_banner web.mp4" type="video/mp4">
+      <video autoplay muted loop id="hero-video" class="desktop-banner">
+        <source src="video/APIs_banner_web.mp4" type="video/mp4">
       </video>
-      <video autoplay muted loop id="hero-video-rps" class="hide-for-desktop">
-        <source src="video/APIs_Banner_RPS.mp4" type="video/mp4">
+      <video autoplay muted loop id="hero-video" class="ipad-banner">
+        <source src="video/APIs_banner_Ipad.mp4" type="video/mp4">
+      </video>
+      <video autoplay muted loop id="hero-video-rps" class="mobile-banner">
+        <source src="video/APIs_banner_mobile.mp4" type="video/mp4">
       </video>
       <div class="hero container">
         <p class="hero__header">
@@ -104,9 +107,15 @@ Custom Fields: Products, News, Buttons, Homepage video
         </div>
       </div>
 
-      <div class="homepage-connect">
-        <div class="container">
+      <div class="homepage-connect hide-for-mobile container">
+        <div class="">
           <p>Kết nối với hệ thống API của BIDV</p>
+          <button>KẾT NỐI</button>
+        </div>
+      </div>
+      <div class="homepage-connect hide-for-desktop">
+        <div class="container">
+          <p>Kết nối với chúng tôi</p>
           <button>KẾT NỐI</button>
         </div>
       </div>

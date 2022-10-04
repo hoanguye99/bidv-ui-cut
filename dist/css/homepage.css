@@ -13,23 +13,74 @@
 .homepage-container {
   position: relative;
 }
-.homepage-container #hero-video, .homepage-container #hero-video-rps {
+.homepage-container .desktop-banner {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .homepage-container .desktop-banner {
+    display: block;
+  }
+}
+.homepage-container .ipad-banner {
+  display: none;
+}
+@media screen and (min-width: 544px) {
+  .homepage-container .ipad-banner {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .homepage-container .ipad-banner {
+    display: none;
+  }
+}
+.homepage-container .mobile-banner {
+  display: block;
+}
+@media screen and (min-width: 544px) {
+  .homepage-container .mobile-banner {
+    display: none;
+  }
+}
+.homepage-container #hero-video,
+.homepage-container #hero-video-rps {
   position: absolute;
   z-index: -1;
   top: 0;
   left: 0;
   right: 0;
-  min-width: 100%;
+  object-fit: contain;
+  width: 100vw;
 }
 .homepage-container .hero {
-  padding-top: 250px;
+  padding-top: 390px;
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
-@media screen and (max-width: 779px) {
+@media screen and (min-width: 544px) {
   .homepage-container .hero {
-    padding-top: 431px;
+    padding-top: 400px;
+  }
+}
+@media screen and (min-width: 780px) {
+  .homepage-container .hero {
+    padding-top: 550px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .homepage-container .hero {
+    padding-top: 900px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .homepage-container .hero {
+    padding-top: 240px;
+  }
+}
+@media screen and (min-width: 1540px) {
+  .homepage-container .hero {
+    padding-top: 400px;
   }
 }
 @media screen and (max-width: 779px) {
@@ -292,20 +343,12 @@
   background-image: url(../images/homepage-whyus-3.png);
 }
 .homepage-container .homepage-connect {
-  margin-top: 150px;
   width: 100%;
-  height: 236px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../images/homepage-connect.png);
-  border-radius: 0px;
   position: relative;
-}
-@media screen and (max-width: 779px) {
-  .homepage-container .homepage-connect {
-    margin-top: 0px;
-  }
 }
 .homepage-container .homepage-connect > div {
   position: absolute;
@@ -314,23 +357,21 @@
   right: 0;
   bottom: 0;
 }
-.homepage-container .homepage-connect > div > p {
+.homepage-container .homepage-connect.hide-for-mobile {
+  height: 236px;
+  margin-top: 150px;
+  border-radius: 8px;
+}
+.homepage-container .homepage-connect.hide-for-mobile p {
+  margin-left: 48px;
   margin-top: 70px;
   font-family: Roboto-Medium;
   font-size: 30px;
   line-height: 45px;
   color: white;
 }
-@media screen and (max-width: 779px) {
-  .homepage-container .homepage-connect > div > p {
-    font-family: Roboto-Bold;
-    margin-top: 20px;
-    font-size: 24px;
-    line-height: 150%;
-    max-width: 183px;
-  }
-}
-.homepage-container .homepage-connect > div > button {
+.homepage-container .homepage-connect.hide-for-mobile button {
+  margin-left: 48px;
   margin-top: 20px;
   cursor: pointer;
   width: fit-content;
@@ -349,13 +390,35 @@
   line-height: 28px;
   text-align: center;
 }
-@media screen and (max-width: 779px) {
-  .homepage-container .homepage-connect > div > button {
-    width: 140px;
-    height: 40px;
-    font-size: 14px;
-    line-height: 20px;
-  }
+.homepage-container .homepage-connect.hide-for-desktop {
+  background-position: 75% center;
+  height: 215px;
+  margin-top: 0px;
+}
+.homepage-container .homepage-connect.hide-for-desktop p {
+  font-family: Roboto-Bold;
+  margin-top: 31px;
+  font-size: 18px;
+  line-height: 28px;
+  max-width: 123px;
+  color: white;
+}
+.homepage-container .homepage-connect.hide-for-desktop button {
+  margin-top: 32px;
+  cursor: pointer;
+  width: fit-content;
+  color: white;
+  text-decoration: none;
+  width: 215px;
+  height: 48px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  width: 140px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 20px;
 }
 .homepage-container .homepage-steps {
   margin-top: 150px;
