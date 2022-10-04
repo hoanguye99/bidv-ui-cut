@@ -1,5 +1,344 @@
-@import '../utils/init';
+@import "../utils/init";
+.hdsd-container {
+  position: relative;
+  margin-left: 180px;
+  margin-top: 75.16px;
+  @include breakpoint-down("bp-sm") {
+    margin-left: 26px;
+    margin-top: 24px;
+  }
+}
+.hdsd-heading {
+  width: 340px;
+  height: 35px;
+  color: $blue-primary-1;
+}
+.hdsd-step {
+  margin-top: 69.84px;
+  margin-left: 20px;
+  line-height: 30px;
+  .step {
+    margin-top: 90px;
+    display: block;
+    justify-content: center;
+    @include breakpoint-down("bp-sm") {
+      justify-content: start;
+    }
+    > .step__main-content {
+      display: flex;
+      flex-direction: column;
+      // @include breakpoint-down("bp-sm") {
+      //   max-width: 305px;
+      //   flex-direction: column;
+      //   align-items: start;
+      // }
+      > .step__heading {
+        display: flex;
+        flex-direction: row;
 
+        > .include-connect {
+          height: 100%;
+          margin: 0 25px;
+          @include breakpoint-down("bp-sm") {
+            margin: 0;
+            justify-content: start;
+          }
+          > .image-container {
+            @include breakpoint-down("bp-sm") {
+              margin: 0 25px;
+              width: 51px;
+              height: 51px;
+            }
+            flex-shrink: 0;
+            position: relative;
+            width: 54px;
+            height: 54px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 9999px;
+            > .blur {
+              position: absolute;
+              z-index: -1;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              filter: blur(10px);
+              border-radius: 9999px;
+            }
+            > .image {
+              width: 31.74px;
+              height: 29.41px;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              @include breakpoint-down("bp-sm") {
+                width: 30px;
+                height: 30px;
+              }
+            }
+          }
+        }
+        .name {
+          color: $neutral-3;
+        }
+        .title {
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      > .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        font-size: 14px;
+        margin-top: 24px;
+        margin-left: 105px;
+        margin-right: 20px;
+        @include breakpoint-down("bp-sm") {
+          margin-left: 0px;
+          margin-right: 24px;
+        }
+        > .step-sub-content {
+          margin-left: 35px;
+          @include breakpoint-down("bp-sm") {
+            margin-left: 15px;
+            display: list-item;
+          }
+        }
+        > .step-sub-content-highlighter {
+          margin-left: 35px;
+          background-color: $semantic-9;
+          padding: 24px;
+          border-radius: 4px;
+          @include breakpoint-down("bp-sm") {
+            margin-left: 0px;
+          }
+        }
+        > .content-wrapper {
+          display: flex;
+          gap: 12px;
+          align-items: start;
+          > .content {
+            text-align: left;
+            margin-top: 23px;
+            font-size: 16px;
+            line-height: 24px;
+            color: $neutral-2;
+            @include breakpoint-down("bp-sm") {
+              margin-top: 6px;
+              margin-bottom: 40px;
+              font-size: 14px;
+              line-height: 21px;
+              color: #8e8e8e;
+            }
+          }
+          svg {
+            margin-top: 1rem;
+            flex-shrink: 0;
+          }
+          &.open {
+            > .content {
+              @include breakpoint-down("bp-sm") {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2; /* number of lines to show */
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+              }
+            }
+            svg {
+              transform: rotate(180deg);
+              -webkit-transform: rotate(180deg);
+              -ms-transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  .include-connect {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint-down("bp-sm") {
+      height: 100%;
+    }
+    > .image-container {
+      @include breakpoint-down("bp-sm") {
+        margin: 0 25px;
+        width: 51px;
+        height: 51px;
+      }
+      flex-shrink: 0;
+      position: relative;
+      width: 54px;
+      height: 54px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 9999px;
+      > .blur {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        filter: blur(10px);
+        border-radius: 9999px;
+      }
+      > .image {
+        width: 31.74px;
+        height: 29.41px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        @include breakpoint-down("bp-sm") {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  // .step-content {
+  // }
+
+  .step-highlighter {
+    color: $blue-primary-3;
+  }
+  .step:nth-of-type(1) {
+    grid-area: step1;
+    .image-container {
+      background: $linear-4;
+      > .blur {
+        background: $linear-4;
+      }
+      > .image {
+        background-image: url(../images/homepage-step-1.png);
+      }
+    }
+    .title {
+      background: $linear-4;
+    }
+  }
+  .step:nth-of-type(2) {
+    grid-area: step2;
+    .image-container {
+      background: $linear-2;
+      > .blur {
+        background: $linear-2;
+      }
+      > .image {
+        background-image: url(../images/homepage-step-2.png);
+      }
+    }
+    .title {
+      background: $linear-2;
+    }
+  }
+  .step:nth-of-type(3) {
+    grid-area: step3;
+    .image-container {
+      background: $linear-4;
+      > .blur {
+        background: $linear-4;
+      }
+      > .image {
+        background-image: url(../images/homepage-step-3.png);
+      }
+    }
+    .title {
+      background: $linear-4;
+    }
+  }
+  .step:nth-of-type(4) {
+    grid-area: step4;
+    .image-container {
+      background: $linear-2;
+      > .blur {
+        background: $linear-2;
+      }
+      > .image {
+        background-image: url(../images/homepage-step-4.png);
+      }
+    }
+    .title {
+      background: $linear-2;
+    }
+  }
+  .step:nth-of-type(5) {
+    grid-area: step5;
+    .image-container {
+      background: $linear-4;
+      > .blur {
+        background: $linear-4;
+      }
+      > .image {
+        background-image: url(../images/homepage-step-5.png);
+      }
+    }
+    .title {
+      background: $linear-4;
+    }
+  }
+  .step:nth-of-type(6) {
+    grid-area: step6;
+    .image-container {
+      background: $linear-2;
+      > .blur {
+        background: $linear-2;
+      }
+      > .image {
+        background-image: url(../images/homepage-step-6.png);
+      }
+    }
+    .title {
+      background: $linear-2;
+    }
+  }
+}
+
+.hdsd-btn-outline {
+  @include btn-215;
+  @include breakpoint-down("bp-sm") {
+    width: 100% !important;
+    justify-content: center;
+    svg {
+      display: none;
+    }
+  }
+  @include breakpoint($bp-sm) {
+    justify-content: space-between;
+  }
+  display: inline;
+  font-size: 14px;
+  color: $blue-primary-3;
+  background-color: $neutral-7;
+  border: 1px solid transparent;
+  border-color: $blue-primary-3;
+  align-items: center;
+  padding: 6px 22px;
+}
+.hdsd-btn {
+  @include btn-215;
+  @include breakpoint-down("bp-sm") {
+    width: 100% !important;
+    justify-content: center;
+    svg {
+      display: none;
+    }
+  }
+  @include breakpoint($bp-sm) {
+    justify-content: space-between;
+  }
+  font-size: 14px;
+  background-color: $blue-primary-3;
+  align-items: center;
+  padding: 6px 22px;
+}
 .test {
   display: flex;
   margin-top: 4px;
