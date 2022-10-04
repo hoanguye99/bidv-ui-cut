@@ -13,7 +13,241 @@ Custom Fields: Products, News, Buttons, Homepage video
     <link rel="stylesheet" href="./css/hdsd.css" />
   </head>
   <body>
+    <div class="container">
+      <h3 class="hdsd-heading">
+        <span class="hide-for-mobile">Trang chủ / Hướng dẫn sử dụng</span>
+        <span class="hide-for-desktop">Hướng dẫn sử dụng</span>
+      </h3>
+      <div>
+        <div class="hdsd-step">
+          <div class="step">
+            <div class="step__main-content">
+              <div class="step__heading">
+                <div class="include-connect">
+                  <div class="image-container">
+                    <div class="blur"></div>
+                    <span class="image"></span>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="name">Bước 1</h4>
+                  <h4 class="title">Đăng ký tài khoản</h4>
+                </div>
+              </div>
+              <div class="text-container">
+                <p>
+                  Đăng ký tài khoản để khám phá, trải nghiệm các sản phẩm dịch
+                  vụ của BIDV cung cấp qua Open API. Đăng ký tài khoản tại
+                  <a class="step-highlighter" href="#">đây</a>.
+                </p>
+                <p>Hoặc <a class="hdsd-btn-outline" href="#">Đăng ký</a></p>
 
+                <p>
+                  Mail kích hoạt có thời hạn trong vòng 48h. Click vào link
+                  trong mail để kích hoạt tài khoản.
+                </p>
+                <p class="step-highlighter">
+                  Lưu ý: Nếu bạn không nhận được email, vui lòng kiểm tra thư
+                  mục spam.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__main-content">
+              <div class="step__heading">
+                <div class="include-connect">
+                  <div class="image-container">
+                    <div class="blur"></div>
+                    <span class="image"></span>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="name">Bước 2</h4>
+                  <h4 class="title">
+                    Tạo ứng dụng và lựa chọn sản phẩm dịch vụ
+                  </h4>
+                </div>
+              </div>
+              <div class="text-container">
+                <p>
+                  Chọn chức năng Đăng nhập.
+                  <a class="hdsd-btn" href="#">Đăng nhập</a>
+                </p>
+
+                <p>
+                  Vào menu <b class="step-highlighter">Ứng dụng</b>, chọn
+                  <b class="step-highlighter">Tạo một ứng dụng mới</b>. Bạn sẽ
+                  thấy các trường cần nhập về ứng dụng của bạn.
+                </p>
+                <p>Giải thích thêm về các trường:</p>
+                <div class="step-sub-content">
+                  <p><b>Tiêu đề:</b> (Bắt buộc.) - Tên ứng dụng của bạn.</p>
+                  <p>
+                    <b>Chứng chỉ</b> (Tùy chọn.) - Tải lên chứng chỉ X509 (PEM
+                    định dạng).
+                  </p>
+                  <p>
+                    <b>Mô tả </b> (Tùy chọn.) - Nhập mô tả ngắn gọn về những gì
+                    ứng dụng của bạn làm.
+                  </p>
+                  <p>
+                    <b>Application Oauth Redirect URL</b> (Tùy chọn.) - Xác định
+                    URL để ứng dụng nhận mã code sau khi xác thực. Mã code này
+                    được dùng để đổi lấy accesstoken gọi API.
+                  </p>
+                  <p>
+                    <b>Application symmetric key</b>
+                    (Tuỳ chọn) - Mật mã đối xứng dùng để mã hoá và giải mã thông
+                    tin
+                  </p>
+                  <p>
+                    <b>Application whitelist IP</b> (Tuỳ chọn) - Danh sách các
+                    dải địa chỉ IP được cấp quyền truy cập vào hệ thống
+                  </p>
+                </div>
+                <b class="step-highlighter">Client ID và Client Secret</b>
+                <div class="step-sub-content">
+                  <p>
+                    Sau khi tạo ứng dụng, bạn sẽ nhận được Client ID và Client
+                    Secret của mình. Sao chép những giá trị này và giữ nó ở một
+                    nơi an toàn. Nếu bạn làm mất nó, bạn sẽ phải lấy một cặp
+                    chìa khóa mới. Client ID – Định dạng công khai ứng dụng của
+                    bạn. Nó thể hiện thông tin của đối tác khi sử dụng các API.
+                    Client Secret – Định dạng tối mật ứng dụng của bạn. Nó cho
+                    phép chúng tôi xác minh thông tin ứng dụng của bạn. Và phục
+                    vụ ứng dụng xác thực. Lưu ý: Client ID và Client Secret là
+                    một cặp chìa khóa xác định bạn là người đã được xác thực và
+                    có thể bảo vệ chính bạn và khách hàng của bạn. Hãy lưu chúng
+                    ở một nơi an toàn.
+                  </p>
+                </div>
+                <p>
+                  Chọn sản phẩm dịch vụ. Đăng ký gói API trong sản phẩm dịch vụ
+                  cho ứng dụng.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step__main-content">
+              <div class="step__heading">
+                <div class="include-connect">
+                  <div class="image-container">
+                    <div class="blur"></div>
+                    <span class="image"></span>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="name">Bước 3</h4>
+                  <h4 class="title">Trải nghiệm API</h4>
+                </div>
+              </div>
+              <div class="text-container">
+                <p>
+                  Bạn có thể kiểm tra ứng dụng của mình bằng công cụ kiểm tra có
+                  thể tạo yêu cầu gọi RestAPI. Chẳng hạn như SOAP UI, Postman.
+                  Hơn nữa, bạn có thể thử nghiệm dịch vụ trên trang web. Để thử
+                  nghiệm dịch vụ, hãy làm theo hướng dẫn sau:
+                </p>
+                <div class="step-sub-content">
+                  <p>
+                    Mở <b>menu APIs</b>, chọn dịch vụ mà bạn muốn trải nghiệm.
+                    Để thử một APIs, chọn một API từ danh sách API. Chi tiết về
+                    dịch vụ chứa thông tin về Endpoint API, bảo mật API, tham số
+                    API và thông số phản hồi. Nó cũng có kiểu dữ liệu và mẫu đơn
+                    giản. Bạn có thể tải xuống tài liệu API với định dạng YAML
+                    cung cấp đầy đủ các thông tin chi tiết của API. Bao gồm
+                    thông tin về Endpoint, bảo mật API, tham số API … Ngoài ra
+                    để trải nghiệm trực tiếp API, bạn có thể chọn tính năng Try
+                    It.
+                  </p>
+                </div>
+                <div class="step-sub-content-highlighter">
+                  <p>
+                    Mở <b>menu APIs</b>, chọn dịch vụ mà bạn muốn trải nghiệm.
+                    Để thử một APIs, chọn một API từ danh sách API. Chi tiết về
+                    dịch vụ chứa thông tin về Endpoint API, bảo mật API, tham số
+                    API và thông số phản hồi. Nó cũng có kiểu dữ liệu và mẫu đơn
+                    giản. Bạn có thể tải xuống tài liệu API với định dạng YAML
+                    cung cấp đầy đủ các thông tin chi tiết của API. Bao gồm
+                    thông tin về Endpoint, bảo mật API, tham số API … Ngoài ra
+                    để trải nghiệm trực tiếp API, bạn có thể chọn tính năng Try
+                    It.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__main-content">
+              <div class="step__heading">
+                <div class="include-connect">
+                  <div class="image-container">
+                    <div class="blur"></div>
+                    <span class="image"></span>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="name">Bước 4</h4>
+                  <h4 class="title">Tích hợp và kiểm thử</h4>
+                </div>
+              </div>
+
+              <div class="text-container">
+                <p>Yêu cầu tích hợp và kiểm thử.</p>
+                <p>
+                  Nhận thông tin kết nối môi trường kiểm thử, tiến hành tích hợp
+                  và kiểm thử.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__main-content">
+              <div class="step__heading">
+                <div class="include-connect">
+                  <div class="image-container">
+                    <div class="blur"></div>
+                    <span class="image"></span>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="name">Bước 5</h4>
+                  <h4 class="title">Chuẩn bị điều kiện triển khai</h4>
+                </div>
+              </div>
+
+              <div class="text-container">
+                <p>Xác nhận hoàn tất kiểm thử và yêu cầu go live.</p>
+                <p>Nhận thông tin kết nối môi trường Production.</p>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__main-content">
+              <div class="step__heading">
+                <div class="include-connect">
+                  <div class="image-container">
+                    <div class="blur"></div>
+                    <span class="image"></span>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="name">Bước 6</h4>
+                  <h4 class="title">Go live</h4>
+                </div>
+              </div>
+
+              <div class="text-container">
+                <p>Triển khai lên môi trường Production.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- <script src="./js/homepage.js"></script> -->
   </body>
 </html>
