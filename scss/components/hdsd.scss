@@ -9,16 +9,24 @@
   }
 }
 .hdsd-heading {
-  width: 340px;
-  height: 35px;
+  margin-top: 76px;
+  margin-bottom: 69.84px;
   color: $blue-primary-1;
+  @include font-weight-medium;
+  font-size: 24px;
+  line-height: 35px;
+  @include breakpoint-down("bp-sm") {
+    margin-top: 24px;
+    margin-bottom: 45px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 .hdsd-step {
-  margin-top: 69.84px;
   margin-left: 20px;
   line-height: 30px;
   .step {
-    margin-top: 90px;
+    margin-bottom: 90px;
     display: block;
     justify-content: center;
     @include breakpoint-down("bp-sm") {
