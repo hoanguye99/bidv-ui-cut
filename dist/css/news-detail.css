@@ -134,10 +134,14 @@
     margin: auto;
   }
 }
+.news-detail-banner > .image {
+  height: 209px;
+}
 .news-detail-banner > .image > img {
   width: 100%;
-  height: 209px;
+  height: 100%;
   padding: 2px;
+  object-fit: cover;
 }
 .news-detail-banner > .image > .news-time {
   width: 94.06px;
