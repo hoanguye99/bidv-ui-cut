@@ -29,6 +29,7 @@
     border-radius: 8px;
     @include breakpoint-down("bp-sm") {
       width: 156px;
+      padding-top: 0;
     }
 
     > .title {
@@ -100,7 +101,7 @@
     }
     > img {
       width: 200px;
-      position: absolute;
+      position: inherit;
       top: 0;
       margin-left: 23px;
       margin-right: 23px;
@@ -111,13 +112,14 @@
       }
     }
     > .body {
-      margin-top: 39px;
+      margin-top: -99px;
       padding: 23px;
       box-shadow: 0px 0px 12px rgba(208, 208, 208, 0.4);
       border-radius: 8px;
       @include breakpoint-down("bp-sm") {
-        margin-top: 20px;
+        margin-top: -45px;
         padding: 14px;
+        padding-top: 22px;
       }
       > .title {
         height: 70px;
@@ -179,5 +181,48 @@
         }
       }
     }
+  }
+}
+.carousel {
+  display: flex;
+  flex-direction: row;
+  [data-carousel-show] {
+    content: "1";
+  }
+  .carousel-item {
+    flex-shrink: 0;
+    opacity: 1;
+    display: block;
+    transition: visibility 0.5s linear, opacity 0.5s linear, width 0.5s linear;
+  }
+  .carousel-item.hide {
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+  }
+  .common {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-color: $neutral-7;
+    border-radius: 100%;
+    justify-content: center;
+    box-shadow: 0px 4px 4px rgba(208, 208, 208, 0.25);
+    transform: rotate(-180deg);
+    cursor: pointer;
+    > svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .next {
+    left: 0;
+    top: 50%;
+  }
+  .pre {
+    right: 0;
+    top: 50%;
   }
 }

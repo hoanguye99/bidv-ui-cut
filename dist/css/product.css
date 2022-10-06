@@ -48,6 +48,7 @@
 @media screen and (max-width: 779px) {
   .product-list .product-item {
     width: 156px;
+    padding-top: 0;
   }
 }
 .product-list .product-item > .title {
@@ -128,7 +129,7 @@
 }
 .product-list .product-item-type2 > img {
   width: 200px;
-  position: absolute;
+  position: inherit;
   top: 0;
   margin-left: 23px;
   margin-right: 23px;
@@ -141,15 +142,16 @@
   }
 }
 .product-list .product-item-type2 > .body {
-  margin-top: 39px;
+  margin-top: -99px;
   padding: 23px;
   box-shadow: 0px 0px 12px rgba(208, 208, 208, 0.4);
   border-radius: 8px;
 }
 @media screen and (max-width: 779px) {
   .product-list .product-item-type2 > .body {
-    margin-top: 20px;
+    margin-top: -45px;
     padding: 14px;
+    padding-top: 22px;
   }
 }
 .product-list .product-item-type2 > .body > .title {
@@ -218,6 +220,50 @@
     font-size: 14px;
     line-height: 20px;
   }
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+}
+.carousel [data-carousel-show] {
+  content: "111111111111111111111111111111";
+}
+.carousel .carousel-item {
+  flex-shrink: 0;
+  opacity: 1;
+  display: block;
+  transition: visibility 0.5s linear, opacity 0.5s linear, width 0.5s linear;
+}
+.carousel .carousel-item.hide {
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+}
+.carousel .common {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 100%;
+  justify-content: center;
+  box-shadow: 0px 4px 4px rgba(208, 208, 208, 0.25);
+  transform: rotate(-180deg);
+  cursor: pointer;
+}
+.carousel .common > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.carousel .next {
+  left: 0;
+  top: 50%;
+}
+.carousel .pre {
+  right: 0;
+  top: 50%;
 }
 
 /*# sourceMappingURL=product.css.map */
