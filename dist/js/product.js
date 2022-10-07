@@ -4,22 +4,28 @@ const showItemCarousel = (carousel, start, limit) => {
     carousel.getElementsByClassName("carousel-item")
   );
   arrCarouselItem.forEach((val, index) => {
-    console.log("start: " + start + " limit: " + limit);
     var end = Number(start) + Number(limit);
     if (index >= start && index < end) {
       val.classList.remove("hide");
       setTimeout(function () {
         val.style.display = "block";
       }, 30);
-
-      console.log("show");
     } else {
       val.classList.add("hide");
       setTimeout(function () {
         val.style.display = "none";
       }, 500);
-      console.log("hide");
     }
+  });
+};
+const hideItemCarousel = (carousel, start, limit) => {
+  let arrCarouselItem = Array.from(
+    carousel.getElementsByClassName("carousel-item")
+  );
+  arrCarouselItem.forEach((val, index) => {
+    var end = Number(start) + Number(limit);
+    if (index >= start && index < end) val.style.display = "block";
+    else val.style.display = "none";
   });
 };
 Array.from(allCarousel).forEach((item) => {
@@ -44,5 +50,5 @@ Array.from(allCarousel).forEach((item) => {
       showItemCarousel(item, start, countCarouselShow);
     })
   );
-  showItemCarousel(item, start, countCarouselShow);
+  hideItemCarousel(item, start, countCarouselShow);
 });
