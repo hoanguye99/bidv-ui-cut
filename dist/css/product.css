@@ -227,7 +227,7 @@
   flex-direction: row;
 }
 .carousel [data-carousel-show] {
-  content: "111111111111111111111111111111";
+  content: "1";
 }
 .carousel .carousel-item {
   flex-shrink: 0;
